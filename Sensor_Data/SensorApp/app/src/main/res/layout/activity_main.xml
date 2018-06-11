@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="152dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginRight="107dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="164dp"
+        android:text="START SENSORS"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="152dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="183dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginRight="107dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="68dp"
+        android:text="STOP SENSORS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="64dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="293dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="293dp"
+        android:layout_marginTop="32dp"
+        android:text="Exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="310dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginLeft="151dp"
+        android:layout_marginRight="175dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="87dp"
+        android:text="logs at :\n/sdcard/sensor_log.txt\n/sdcard/android.sensor.accelerometer.txt\n/sdcard/android.sensor.gyroscope.txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:text="logs at :\n/sdcard/sensor_log.txt\n/sdcard/android.sensor.accelerometer.txt\n/sdcard/android.sensor.gyroscope.txt" />
+
+</android.support.constraint.ConstraintLayout>
