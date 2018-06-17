@@ -6,5 +6,8 @@ The data from the sensors are stored at:
 sdcard/android.sensor.accelerometer.txt
 sdcard/android.sensor.gyroscope.txt
 
+Use SensorApp for Andorid Mobile OS.
+Use SensorWearApp for Android Wear OS 
+
 Issues:
 Need to provide storage permission manually on few devices.
