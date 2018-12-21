@@ -1,6 +1,6 @@
 Project Description:
 The Bite Counter tracks wrist motion in order to monitor the food intake of the user.
-The human wrist rolls in a distinctive pattern during eating and using this principle along with sophisticated filters and heuristics the number of bites consumed during a meal is determined.
+The human wrist rolls in a distinctive pattern during eating and using this principle the number of bites consumed during a meal is determined.
 http://cecas.clemson.edu/~ahoover/bite-counter/BIBM09.pdf
 
 1) Bite Counter WearOS App
