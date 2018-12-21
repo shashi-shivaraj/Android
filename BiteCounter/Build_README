@@ -1,0 +1,80 @@
+Please follow the below instructions to compile the source code and install the applications:
+
+a)To build the native libraries:
+
+	1)Download the latest platform specific ndk bundle from:
+		https://developer.android.com/ndk/downloads/
+
+		Unzip the downloaded file.
+
+	2)Open a terminal and add the path to the ndk folder to the environment variable 'PATH':
+		For example,
+		export PATH=$PATH:/home/shashishivaraju/Android/ndk-bundle
+
+	3)Use the provided Makefile to build the libraries.:
+		make clean;make;make install
+
+		If the above command gets executed without any errors,
+		the two native libraries "libBiteCounterAlgo.so" and "libBiteCounterJNI.so"
+		will be copied to WearOS app "BiteCounter".
+
+
+b)To build the Bite Counter WearOS Application: 
+
+	1)Download the latest platform specific Android Studio from:
+		https://developer.android.com/studio/
+
+		Install and run Android Studio.
+		Update to latest SDK if required.
+
+	2)Use Open an existing Android Studio project and Select BiteCounter app.
+
+	3)Select Build->Rebuild Project.
+
+	4)Enable Developer option on WearOS Watch:
+		Go to settings->About->Build number
+		Click on Build number multiple time until developer option is enabled.
+
+		Next enable settings->Developer options->ADB debugging &
+				settings->Developer options->Debug over WiFi.                                       
+
+	5)Connect the WearOS watch using adb (android debugger) interface:
+		Connect the WearOS watch & host system to same wifi network and note down the watch's IP address.
+		Connect the WearOS watch to host using usb. 
+		In the terminal tab of Android Studio use the below command to connect the device:
+			adb tcpip 5555
+			adb connect "Watch IP address"
+
+		Now the WearOS device is connected to host via wifi,watch can be now disconnected from usb connection.
+
+	6)Install the BiteCounter WearOS app:
+		In Android Studio,Select Run->run 'app'->Select the WearOS watch as deployment target to install the apk.
+
+	7)APK
+		The apk will be generated at the location:
+		BiteCounter_Android/Watch/BiteCounter/app/build/outputs/apk/debug
+
+ 
+b)To build the Bite Counter Mobile Application:
+
+	1)Use Open an existing Android Studio project and Select BiteCounterMobile app.
+
+	2)Select Build->Rebuild Project.
+
+	3)Enable Developer option on Android Mobile:
+		Go to settings->About->Build number
+		Click on Build number multiple time until developer option is enabled.
+
+		Next enable settings->Developer options->ADB debugging.                                      
+
+	4)Connect to Android Mobile device using adb (android debugger) interface:
+		Connect the Android Mobile device to host using usb. 
+		Now the mobile device should be connected to host.
+
+	6)Install the BiteCounter WearOS app:
+		In Android Studio,Select Run->run 'app'->Select the Android Mobile device as deployment target to install the apk.
+
+	7)APK
+		The apk will be generated at the location:
+		BiteCounter_Android/Mobile/BiteCounterMobile/app/build/outputs/apk/debug
+

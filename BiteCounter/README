@@ -1,0 +1,18 @@
+Project Description:
+The Bite Counter tracks wrist motion in order to monitor the food intake of the user.
+The human wrist rolls in a distinctive pattern during eating and using this principle along with sophisticated filters and heuristics the number of bites consumed during a meal is determined.
+http://cecas.clemson.edu/~ahoover/bite-counter/BIBM09.pdf
+
+1) Bite Counter WearOS App
+
+Developed a native application for Google’s WearOS smartwatches,which utilizes Android’s NDK 
+API to capture watch’s gyroscope data.
+Implemented the patented algorithm of the company to determine the bite count during a meal using the gyroscope data. 
+
+Implemented a client which sends the session data from the smartwatch to a remote server using HTTP protocol if connected to WiFi or forwards the session data to a Mobile client using Bluetooth protocol.
+
+2) Bite Counter Mobile App
+Developed an Android application,which utilizes Bluetooth to receive data from the Bite Counter WearOS App of a smartwatch and sends it to a remote server using HTTP protocol.
+
+Both the applications are published at Google Play Store.
+https://play.google.com/store/apps/details?id=com.icountbites

@@ -1,0 +1,50 @@
+This file explains the file stucture of the project.
+Please refer to Build_README for instructions to generate the APKs.
+
+a)Bite Counter WearOS app
+
+1.The source code of Bite Counter wearOS app can be found at the folder "BiteCounter_Android/Watch".
+
+2.Please refer the file "BiteCounterAlgo/jni/inc/BiteCount_Sensor.h" for macros controlling 
+session timeout,max record storage and other configurations of the app.
+
+3.Please refer the file "Watch/BiteCounterAlgo/jni/Android.mk" to modify configutations.
+
+Enabling the macro CONFIG_ALL_LOGS will provide debug logs of the native algorithm in the 
+file "BC_log.txt".
+
+Enabling the macro CONFIG_FILE_METHOD will provide the gyroscope data in the 
+file "gyro_data.txt".
+
+4.Obtaining the files from the watch.
+
+To get the stored session record file,use the command:
+adb pull /storage/emulated/0/Android/data/com.icountbites/files/BC_DataBackup.txt
+
+To get the debug log file,use the command:
+adb pull /storage/emulated/0/Android/data/com.icountbites/files/BC_log.txt
+
+To get the gyroscope data file,use the command:
+adb pull /sdcard/gyro_data.txt
+
+5.Version
+
+The app version code and version name is set at:
+Watch/BiteCounter/app/build.gradle
+
+The developer version of the app is set at the MainActivity.
+String Version = "Bite_Counter_v_1_0_0";
+It will print a system log (a.k.a logcat) once after the app has been installed and premissions are provided by user.
+
+b)Bite Counter Android Mobile app
+
+1.The source code of Bite Counter Mobile app can be found at the folder "BiteCounter_Android/Mobile".
+
+2.Version
+
+The app version code and version name is set at:
+Mobile/BiteCounterMobile/app/build.gradle
+
+The developer version of the app is set at the MainActivity.
+String Version = "Bite_Counter_Mobile_v_1_0_0";
+It will print a system log (a.k.a logcat) once after the app has been installed and premissions are provided by user.
